@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Antraks-test</title>
+
+  <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font">
+
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      $( function() {
+          $("#filters").sortable();
+          $("#filters").disableSelection();
+      } );
+  </script>
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden">Фильтры приборов</h1>
+    <section class="filters" id="filters">
+      <div class="filters__wrap" id="devices">
+        <div class="head">
+          <h2 class="head__header">Список приборов</h2>
+          <div class="pagination">
+            <button class="pagination__button pagination__button--previous" type="button">Предыдущая</button>
+            <p><span class="pagination__page pagination__page--current">1</span> из <span class="pagination__page pagination__page--all">11</span></p>
+            <button class="pagination__button pagination__button--next" type="button">Следующая</button>
+          </div>
+          <div class="head__wrap">
+            <select class="filter" aria-label="Фильтр">
+              <option value="1">Filter</option>
+              <option value="2">Filter 1</option>
+            </select>
+          </div>
+          <div class="controls">
+            <button class="controls__button controls__button--min" type="button">Свернуть</button>
+            <button class="controls__button controls__button--max" type="button">Развернуть</button>
+            <button class="controls__button controls__button--close" type="button">Закрыть</button>
+          </div>
+        </div>
+        <iframe src="devices.html"></iframe>
+      </div>
+
+      <div class="filters__wrap filters__wrap--events" id="events">
+        <div class="head">
+          <h2 class="head__header">События</h2>
+          <div class="pagination">
+            <button class="pagination__button pagination__button--previous" type="button">Предыдущая</button>
+            <p><span class="pagination__page pagination__page--current">1</span> из <span class="pagination__page pagination__page--all">11</span></p>
+            <button class="pagination__button pagination__button--next" type="button">Следующая</button>
+          </div>
+          <div class="head__wrap">
+            <select class="filter" aria-label="Фильтр">
+              <option value="1">Filter</option>
+              <option value="2">Filter 1</option>
+            </select>
+          </div>
+          <div class="controls">
+            <button class="controls__button controls__button--min" type="button">Свернуть</button>
+            <button class="controls__button controls__button--max" type="button">Развернуть</button>
+            <button class="controls__button controls__button--close" type="button">Закрыть</button>
+          </div>
+        </div>
+        <iframe src="events.html"></iframe>
+      </div>
+
+      <div class="filters__wrap" id="sessions">
+        <div class="head">
+          <h2 class="head__header">Сеансы</h2>
+          <div class="pagination">
+            <button class="pagination__button pagination__button--previous" type="button">Предыдущая</button>
+            <p><span class="pagination__page pagination__page--current">1</span> из <span class="pagination__page pagination__page--all">11</span></p>
+            <button class="pagination__button pagination__button--next" type="button">Следующая</button>
+          </div>
+          <div class="head__wrap">
+            <select class="filter" aria-label="Фильтр">
+              <option value="1">Filter</option>
+              <option value="2">Filter 1</option>
+            </select>
+          </div>
+          <div class="controls">
+            <button class="controls__button controls__button--min" type="button">Свернуть</button>
+            <button class="controls__button controls__button--max" type="button">Развернуть</button>
+            <button class="controls__button controls__button--close" type="button">Закрыть</button>
+          </div>
+        </div>
+        <iframe src="sessions.html"></iframe>
+      </div>
+
+      <div class="filters__wrap" id="settings">
+        <div class="head">
+          <h2 class="head__header">Настройки прибора</h2>
+          <div class="pagination">
+            <button class="pagination__button pagination__button--previous" type="button">Предыдущая</button>
+            <p><span class="pagination__page pagination__page--current">1</span> из <span class="pagination__page pagination__page--all">11</span></p>
+            <button class="pagination__button pagination__button--next" type="button">Следующая</button>
+          </div>
+          <div class="head__wrap">
+            <select class="filter" aria-label="Фильтр">
+              <option value="1">Filter</option>
+              <option value="2">Filter 1</option>
+            </select>
+          </div>
+          <div class="controls">
+            <button class="controls__button controls__button--min" type="button">Свернуть</button>
+            <button class="controls__button controls__button--max" type="button">Развернуть</button>
+            <button class="controls__button controls__button--close" type="button">Закрыть</button>
+          </div>
+        </div>
+        <iframe src="settings.html"></iframe>
+      </div>
+
+      <div class="filters__wrap filters__wrap--map" id="maps">
+        <div class="head">
+          <h2 class="head__header">Карты</h2>
+          <div class="controls">
+            <button class="controls__button controls__button--min" type="button">Свернуть</button>
+            <button class="controls__button controls__button--max" type="button">Развернуть</button>
+            <button class="controls__button controls__button--close" type="button">Закрыть</button>
+          </div>
+        </div>
+        <iframe src="map.html"></iframe>
+      </div>
+    </section>
+
+    <section class="min-filters">
+      <h2 class="visually-hidden">Свернутые окна</h2>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__link" href="/">
+      <img class="footer__logo" src="img/logo.png" width="50" height="50" alt="Логотип компании Антракс">
+    </a>
+    <address class="footer__address">Московская область, г. Фрязино, а/я 2205, 141195</address>
+    <div class="contacts">
+      <a class="contacts__phone" href="tel:84959911230">+7 (495) 991 12 30</a>
+      <a class="contacts__phone" href="tel:88005001792">8 800 500 17 92</a>
+    </div>
+    <div class="support">
+      <a class="support__email" href="mailto:support@antraks.ru">support@antraks.ru</a>
+      <span class="support__note">Техническая поддержка</span>
+    </div>
+  </footer>
+
+  <template id="controls">
+    <div class="controls">
+      <button class="controls__button controls__button--minimize" type="button">Свернуть</button>
+      <button class="controls__button controls__button--maximize" type="button">Развернуть</button>
+      <button class="controls__button controls__button--close" type="button">Закрыть</button>
+    </div>
+  </template>
+  <template id="table__row">
+    <tr class="table__row">
+      <td class="table__cell">Событие 1</td>
+      <td class="table__cell">05:17</td>
+      <td class="table__cell table__cell--double-row">
+        <p class="table__title table__title--max">100</p>
+        <p class="table__title table__title--min">10</p>
+      </td>
+      <td class="table__cell table__cell--double-row">
+        <p class="table__title table__title--max">10000</p>
+        <p class="table__title table__title--min">10</p>
+      </td>
+      <td class="table__cell table__cell--double-row">
+        <p class="table__title table__title--max">100</p>
+        <p class="table__title table__title--min">10</p>
+      </td>
+      <td class="table__cell table__cell--double-row">
+        <p class="table__title table__title--max">10000</p>
+        <p class="table__title table__title--min">10</p>
+      </td>
+      <td class="table__cell table__cell--double-row">
+        <p class="table__title table__title--max">100</p>
+        <p class="table__title table__title--min">10</p>
+      </td>
+      <td class="table__cell table__cell--double-row">
+        <p class="table__title table__title--max">10000</p>
+        <p class="table__title table__title--min">10</p>
+      </td>
+    </tr>
+  </template>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/filters.js"></script>
+</body>
+</html>
